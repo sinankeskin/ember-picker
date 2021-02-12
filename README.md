@@ -1,38 +1,106 @@
-ember-picker
-==============================================================================
+# ember-picker
 
-[Short description of the addon.]
+Ember addon for [vanilla-picker](https://github.com/Sphinxxxx/vanilla-picker) color picker library.
 
+![SS](https://github.com/sinankeskin/ember-picker/blob/main/ss.png?raw=true)
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-* Ember.js v3.16 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
+- Ember.js v3.16 or above
+- Ember CLI v2.13 or above
+- Node.js v10 or above
 
-
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install ember-picker
 ```
 
+## Usage
 
-Usage
-------------------------------------------------------------------------------
+You can change all global configuration settings via `config/environment.js` file.
 
-[Longer description of how to use the addon in apps.]
+Please check [vanilla-picker](https://vanilla-picker.js.org/gen/Picker.html) site for more configuration details.
 
+```javascript
+ENV['ember-picker'] = {
+  parent: undefined,
+  popup: 'right',
+  template: undefined,
+  layout: 'default',
+  alpha: true,
+  editor: true,
+  editorFormat: 'hex',
+  cancelButton: false,
+  color: undefined,
+  onChange: undefined,
+  onDone: undefined,
+  onOpen: undefined,
+  onClose: undefined,
+};
+```
 
-Contributing
-------------------------------------------------------------------------------
+Example as a component
+
+```handlebars
+<Picker @color={{this.color}} @onDone={{this.onDone}} />
+```
+
+```handlebars
+<Picker
+  @color={{this.color}}
+  @onDone={{this.onDone}}
+  style="{{if
+      this.color
+      (concat 'width: 32px;height: 32px;background:' this.color ';')
+      'width: 32px;height: 32px;'
+    }}"
+>
+  Block
+</Picker>
+```
+
+Example as a modifer
+
+```handlebars
+<div
+  class="ember-picker"
+  style="{{if
+      this.color
+      (concat 'width: 32px;height: 32px;background:' this.color ';')
+      'width: 32px;height: 32px;'
+    }}"
+  {{picker color=this.color onDone=this.onDone}}
+>
+  Modifier
+</div>
+```
+
+If you would like access to the picker instance in order to call some methods directly, for example to hide or show
+programmatically, pass an action to registerAPI
+
+```handlebars
+<Input {{picker registerApi=this.saveApi color=this.color onDone=this.onDone}} />
+```
+
+```javascript
+// save the picker instance to use later
+@action
+saveApi(picker) {
+  this.picker = picker;
+}
+
+// programmatically open the datepicker
+@action
+openDatePicker() {
+  this.picker.show();
+}
+```
+
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
-
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).

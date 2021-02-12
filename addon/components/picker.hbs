@@ -1,0 +1,17 @@
+{{! template-lint-disable no-inline-styles }}
+{{#if (has-block)}}
+  <div class="ember-picker" ...attributes {{picker this.args}}>
+    {{yield}}
+  </div>
+{{else}}
+  <div
+    class="ember-picker"
+    style={{if
+      @color
+      (concat 'width: 32px;height: 32px;background:' @color ';')
+      'width: 32px;height: 32px;'
+    }}
+    ...attributes
+    {{picker this.args}}
+  ></div>
+{{/if}}
