@@ -1,6 +1,6 @@
 {
   "name": "ember-picker",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "description": "Ember addon for vanilla-picker color picker library.",
   "keywords": [
     "ember-addon",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "ember-cached-decorator-polyfill": "^0.1.1",
-    "ember-cli-babel": "^7.24.0",
+    "ember-cli-babel": "^7.23.1",
     "ember-cli-htmlbars": "^5.3.2",
     "ember-modifier": "^2.1.1",
     "vanilla-picker": "^2.11.2"
