@@ -90,9 +90,9 @@ saveApi(picker) {
   this.picker = picker;
 }
 
-// programmatically open the datepicker
+// programmatically open the picker
 @action
-openDatePicker() {
+openPicker() {
   this.picker.show();
 }
 ```
