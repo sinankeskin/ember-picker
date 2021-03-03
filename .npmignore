@@ -28,6 +28,7 @@
 /.prettierignore
 /.prettierrc.js
 /*.tgz
+/ss.png
 .gitkeep
 
 # ember-try
