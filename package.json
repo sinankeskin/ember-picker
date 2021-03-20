@@ -32,14 +32,14 @@
   },
   "dependencies": {
     "ember-cached-decorator-polyfill": "^0.1.1",
-    "ember-cli-babel": "^7.26.1",
+    "ember-cli-babel": "^7.26.2",
     "ember-cli-htmlbars": "^5.7.1",
     "ember-modifier": "^2.1.1",
     "vanilla-picker": "^2.11.2"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
-    "@ember/test-helpers": "^2.2.3",
+    "@ember/test-helpers": "^2.2.4",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
     "babel-eslint": "^10.1.0",
