@@ -1,6 +1,6 @@
 {
   "name": "ember-picker",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Ember addon for vanilla-picker color picker library.",
   "keywords": [
     "ember-addon",
