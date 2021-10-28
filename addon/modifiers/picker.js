@@ -1,7 +1,7 @@
 /* globals Picker */
 
 import { tracked } from '@glimmer/tracking';
-import { cached } from 'tracked-toolbox';
+import { cached } from '@glimmer/tracking';
 import Modifier from 'ember-modifier';
 import { getOwner } from '@ember/application';
 
