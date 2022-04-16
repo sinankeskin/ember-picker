@@ -4,21 +4,25 @@
 <Picker
   @color={{this.color}}
   @onDone={{this.onDone}}
-  style="{{if
+  style='{{html-safe
+    (if
       this.color
-      (concat 'width: 32px;height: 32px;background:' this.color ';')
-      'width: 32px;height: 32px;'
-    }}"
+      (concat "width: 32px;height: 32px;background:" this.color ";")
+      "width: 32px;height: 32px;"
+    )
+  }}'
 >
   B
 </Picker>
 <div
-  class="ember-picker"
-  style="{{if
+  class='ember-picker'
+  style='{{html-safe
+    (if
       this.color
-      (concat 'width: 32px;height: 32px;background:' this.color ';')
-      'width: 32px;height: 32px;'
-    }}"
+      (concat "width: 32px;height: 32px;background:" this.color ";")
+      "width: 32px;height: 32px;"
+    )
+  }}'
   {{picker color=this.color onDone=this.onDone}}
 >
   M
