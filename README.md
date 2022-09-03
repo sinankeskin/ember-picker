@@ -8,7 +8,7 @@ Ember addon for [vanilla-picker](https://github.com/Sphinxxxx/vanilla-picker) co
 
 * Ember.js v3.24 or above
 * Ember CLI v3.24 or above
-* Node.js v12 or above
+* Node.js v14 or above
 
 ## Installation
 
@@ -100,6 +100,7 @@ openPicker() {
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
+
 
 ## License
 
