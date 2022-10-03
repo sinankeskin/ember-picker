@@ -23,7 +23,7 @@ export default class PickerModifier extends Modifier {
   constructor() {
     super(...arguments);
 
-    registerDestructor(this, this.cleanup);
+    registerDestructor(this, () => this.picker.destroy());
   }
 
   /**
@@ -56,9 +56,5 @@ export default class PickerModifier extends Modifier {
     if (options.registerAPI && typeof options.registerAPI === 'function') {
       options.registerAPI(this.picker);
     }
-  }
-
-  cleanup() {
-    this.picker.destroy();
   }
 }
