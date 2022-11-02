@@ -80,7 +80,7 @@ If you would like access to the picker instance in order to call some methods di
 programmatically, pass an action to registerAPI
 
 ```handlebars
-<Input {{picker registerApi=this.saveApi color=this.color onDone=this.onDone}} />
+<Input {{picker registerAPI=this.saveApi color=this.color onDone=this.onDone}} />
 ```
 
 ```javascript
