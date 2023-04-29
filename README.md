@@ -6,9 +6,9 @@ Ember addon for [vanilla-picker](https://github.com/Sphinxxxx/vanilla-picker) co
 
 ## Compatibility
 
-* Ember.js v3.28 or above
-* Ember CLI v3.28 or above
-* Node.js v14 or above
+- Ember.js v3.28 or above
+- Ember CLI v3.28 or above
+- Node.js v14 or above
 
 ## Installation
 
@@ -50,11 +50,11 @@ Example as a component
 <Picker
   @color={{this.color}}
   @onDone={{this.onDone}}
-  style="{{if
-      this.color
-      (concat 'width: 32px;height: 32px;background:' this.color ';')
-      'width: 32px;height: 32px;'
-    }}"
+  style='{{if
+    this.color
+    (concat "width: 32px;height: 32px;background:" this.color ";")
+    "width: 32px;height: 32px;"
+  }}'
 >
   Block
 </Picker>
@@ -64,12 +64,12 @@ Example as a modifer
 
 ```handlebars
 <div
-  class="ember-picker"
-  style="{{if
-      this.color
-      (concat 'width: 32px;height: 32px;background:' this.color ';')
-      'width: 32px;height: 32px;'
-    }}"
+  class='ember-picker'
+  style='{{if
+    this.color
+    (concat "width: 32px;height: 32px;background:" this.color ";")
+    "width: 32px;height: 32px;"
+  }}'
   {{picker color=this.color onDone=this.onDone}}
 >
   Modifier
@@ -80,7 +80,9 @@ If you would like access to the picker instance in order to call some methods di
 programmatically, pass an action to registerAPI
 
 ```handlebars
-<Input {{picker registerAPI=this.saveApi color=this.color onDone=this.onDone}} />
+<Input
+  {{picker registerAPI=this.saveApi color=this.color onDone=this.onDone}}
+/>
 ```
 
 ```javascript
@@ -100,7 +102,6 @@ openPicker() {
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
-
 
 ## License
 
